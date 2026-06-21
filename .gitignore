@@ -1,0 +1,21 @@
+# Terraform state — contains resource IDs and, depending on resources used,
+# potentially sensitive values. Never commit.
+*.tfstate
+*.tfstate.*
+
+# Downloaded provider binaries — large, platform-specific, reproducible
+# from .terraform.lock.hcl. That lock file IS committed (pins provider
+# versions, same idea as package-lock.json).
+.terraform/
+
+# Variable files that might carry secrets or environment-specific values.
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Crash logs
+crash.log
+crash.*.log
+
+# OS cruft
+.DS_Store
