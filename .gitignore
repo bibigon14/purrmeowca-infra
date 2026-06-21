@@ -19,3 +19,4 @@ crash.*.log
 
 # OS cruft
 .DS_Store
+terraform
