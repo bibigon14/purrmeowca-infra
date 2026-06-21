@@ -83,7 +83,7 @@ dns.tf         # all DNS record resources
 - [x] R2 buckets (media + reviews)
 - [x] Workers KV namespaces (ip-cache + sms-state)
 - [x] Zone security settings (SSL mode, HTTPS redirect, HSTS)
-- [ ] Turnstile widget configuration, if used by the contact/upload forms
+- [x] Turnstile widget configuration (bot protection on review/contact forms)
 - [ ] Cron Trigger for the Worker's `scheduled` handler (currently
       configured via wrangler.toml, not imported here)
 - [ ] Consider a remote backend if a second operator or machine starts
