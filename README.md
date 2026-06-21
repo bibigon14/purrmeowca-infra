@@ -79,9 +79,12 @@ dns.tf         # all DNS record resources
 
 ## Roadmap
 
-- [ ] Workers Static Assets deployment config (`cloudflare_workers_script` /
-      `wrangler.toml` reference)
-- [ ] R2 bucket + lifecycle rules for `media.purrmeowca.com`
-- [ ] Page Rules / Cache Rules if any are added beyond Cloudflare defaults
+- [x] Workers Custom Domain attachments (apex + www)
+- [x] R2 buckets (media + reviews)
+- [x] Workers KV namespaces (ip-cache + sms-state)
+- [x] Zone security settings (SSL mode, HTTPS redirect, HSTS)
+- [ ] Turnstile widget configuration, if used by the contact/upload forms
+- [ ] Cron Trigger for the Worker's `scheduled` handler (currently
+      configured via wrangler.toml, not imported here)
 - [ ] Consider a remote backend if a second operator or machine starts
       applying changes
