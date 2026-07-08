@@ -28,3 +28,9 @@ resource "cloudflare_workers_domain" "www" {
   service     = "purrmeowca"
   environment = "production"
 }
+
+resource "cloudflare_workers_cron_trigger" "purrmeowca_schedule" {
+  account_id  = var.account_id
+  script_name = "purrmeowca"
+  schedules   = ["0 16 * * *"]
+}
