@@ -84,7 +84,7 @@ dns.tf         # all DNS record resources
 - [x] Workers KV namespaces (ip-cache + sms-state)
 - [x] Zone security settings (SSL mode, HTTPS redirect, HSTS)
 - [x] Turnstile widget configuration (bot protection on review/contact forms)
-- [ ] Cron Trigger for the Worker's `scheduled` handler (currently
+- [x] Cron Trigger for the Worker's `scheduled` handler (currently
       configured via wrangler.toml, not imported here)
 - [ ] Consider a remote backend if a second operator or machine starts
       applying changes
