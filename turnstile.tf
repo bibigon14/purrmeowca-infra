@@ -1,6 +1,6 @@
 # Turnstile widget for PurrmeowCA's review/contact forms.
 #
-# `secret` is a computed, sensitive attribute on this resource — Terraform
+# `secret` is a computed, sensitive attribute on this resource - Terraform
 # will read it into state (where it's protected the same way any other
 # sensitive value is), but it's never declared here. The Worker consumes
 # the secret via a `wrangler secret put TURNSTILE_SECRET` binding, kept

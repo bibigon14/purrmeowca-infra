@@ -1,11 +1,11 @@
 # R2 buckets used by purrmeowca.com.
 #
 # `purrmeowca-media` is served publicly via the media.purrmeowca.com CNAME
-# (see dns.tf — that record is owned by R2's public-access config, not
+# (see dns.tf - that record is owned by R2's public-access config, not
 # managed here). `purrmeowca-reviews` is a private bucket (no public CNAME),
 # presumably consumed directly by the Worker via an R2 binding.
 #
-# These buckets already exist, so they're imported into state — see
+# These buckets already exist, so they're imported into state - see
 # README.md. `location` is omitted because Cloudflare doesn't let you
 # change it after creation, and the API doesn't return one for buckets
 # created without an explicit location hint, so leaving it unset avoids a

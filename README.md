@@ -1,7 +1,7 @@
 # purrmeowca-infra
 
 Terraform configuration for the Cloudflare-side infrastructure behind
-[purrmeowca.com](https://purrmeowca.com) — DNS records today, with Workers
+[purrmeowca.com](https://purrmeowca.com) - DNS records today, with Workers
 Static Assets / R2 / KV planned as a follow-up once the DNS layer is
 comfortable.
 
@@ -29,7 +29,7 @@ terraform init
 
 These DNS records already exist in the live zone (they were created
 manually before this repo existed). They must be imported into Terraform
-state before running `plan`/`apply` — otherwise Terraform will try to
+state before running `plan`/`apply` - otherwise Terraform will try to
 create duplicates and Cloudflare will reject them.
 
 ```bash
@@ -55,7 +55,7 @@ terraform plan
 
 **It must show "No changes."** If it shows a diff for a record you just
 imported, the `.tf` definition doesn't byte-for-byte match the live value
-(easy to get wrong on long TXT records like DKIM keys) — fix the `.tf` file
+(easy to get wrong on long TXT records like DKIM keys) - fix the `.tf` file
 to match what `plan` says is the real value, don't force-apply a guess.
 
 ## Day-to-day use
@@ -66,7 +66,7 @@ terraform apply   # apply after reviewing the plan
 ```
 
 Add new DNS records by adding a new `cloudflare_record` resource block in
-`dns.tf`, then `terraform apply` — no import needed for genuinely new
+`dns.tf`, then `terraform apply` - no import needed for genuinely new
 records, only for things that already exist outside Terraform's knowledge.
 
 ## Layout

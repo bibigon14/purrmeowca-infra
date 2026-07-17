@@ -8,7 +8,7 @@ terraform {
     }
   }
 
-  # Local state for now — fine for a single-operator homelab project.
+  # Local state for now - fine for a single-operator homelab project.
   # If this ever needs to be applied from more than one machine, switch
   # to a remote backend (Terraform Cloud free tier, or an S3-compatible
   # backend like Cloudflare R2 itself).
